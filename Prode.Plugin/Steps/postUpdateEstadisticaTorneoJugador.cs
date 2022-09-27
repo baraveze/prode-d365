@@ -44,7 +44,8 @@ namespace Prode.Plugin
                 estadisticaTorneoJugador.Attributes.Add("bar_puntajetotal", obj.calcularPuntajeTotal(Torneo, JugadorProde, puntajePorAcierto));
                 estadisticaTorneoJugador.Attributes.Add("bar_puntajemaximoconseguido", obj.calcularAciertosMaximos(Torneo, JugadorProde));
                 estadisticaTorneoJugador.Attributes.Add("bar_puntajeminimoconseguido", obj.calcularAciertosMinimos(Torneo, JugadorProde));
-               
+                estadisticaTorneoJugador.Attributes.Add("bar_cantidaddejugadas", obj.calcularCantidadDeJugadas(Torneo, JugadorProde));
+
                 service.Update(estadisticaTorneoJugador);
                     
                 

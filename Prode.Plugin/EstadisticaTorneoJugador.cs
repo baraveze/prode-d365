@@ -100,5 +100,35 @@ namespace Prode.Plugin
 
             return aciertostotales;
         }
+
+        public int calcularCantidadDeJugadas(Guid Torneo, Guid JugadorProde)
+        {
+            
+           
+            
+                string cantidadDeJugadas = @"<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
+                                                    <entity name='bar_jugada'>
+                                                    <attribute name='bar_jugadaid' />
+                                                    <attribute name='bar_name' />
+                                                    <attribute name='createdon' />
+                                                    <order attribute='bar_name' descending='false' />
+                                                    <filter type='and'>
+                                                    <condition attribute='bar_torneo' operator='eq' uitype='bar_torneo' value='{"+Torneo.ToString()+"}' />" +
+                                                    "<condition attribute='bar_jugadorprode' operator='eq' uitype='bar_jugadorprode' value='{"+JugadorProde.ToString()+"}' />" +
+                                                    "<condition attribute='statuscode' operator='eq' value='755230001'/></filter>" +
+                                                    "</entity>" +
+                                                    "</fetch>"; //Filtra por torneo, jugador y estado de la jugada igual a Completada
+
+        
+                EntityCollection CantidadDeJugadas_Collection = _crmService.RetrieveMultiple(new FetchExpression(cantidadDeJugadas));
+                if (CantidadDeJugadas_Collection.Entities.Count > 0)
+                {
+                return CantidadDeJugadas_Collection.Entities.Count;
+                }
+                return 0;
+            }
+
+         
+        }
     }
-}
+
