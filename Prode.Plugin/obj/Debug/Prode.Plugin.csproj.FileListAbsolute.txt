@@ -57,3 +57,4 @@ E:\ezeba\Documents\GitHubRepos\prode-d365\Prode.Plugin\bin\Debug\System.Text.Jso
 E:\ezeba\Documents\GitHubRepos\prode-d365\Prode.Plugin\bin\Debug\System.Threading.Tasks.Extensions.xml
 E:\ezeba\Documents\GitHubRepos\prode-d365\Prode.Plugin\bin\Debug\System.ValueTuple.xml
 E:\ezeba\Documents\GitHubRepos\prode-d365\Prode.Plugin\obj\Debug\Prode.Plugin.csproj.CopyComplete
+E:\ezeba\Documents\GitHubRepos\prode-d365\Prode.Plugin\obj\Debug\Prode.Plugin.csprojAssemblyReference.cache

@@ -23,7 +23,7 @@ namespace Prode.Plugin
 
                 Entity Target = (Entity)context.InputParameters["Target"];
                 Entity preImage = (Entity)context.PreEntityImages["preimage"];
-                int puntajePorAcierto = 0;
+                int puntajePorAcierto = 1;
                 if (!Target.Contains("bar_fechadeproceso"))
                     throw new InvalidPluginExecutionException("El campo fecha proceso no fue actualizado. No se disparó correctamente el proceso.");
 
@@ -35,6 +35,8 @@ namespace Prode.Plugin
 
                 if (Target.Contains("bar_puntajeporacierto"))
                     puntajePorAcierto = Target.GetAttributeValue<int>("bar_puntajeporacierto");
+                else if(preImage.Contains("bar_puntajeporacierto"))
+                        puntajePorAcierto = preImage.GetAttributeValue<int>("bar_puntajeporacierto");
 
                 EstadisticaTorneoJugador obj = new EstadisticaTorneoJugador(service);
                 Entity estadisticaTorneoJugador = new Entity("bar_estadisticatorneojugador");

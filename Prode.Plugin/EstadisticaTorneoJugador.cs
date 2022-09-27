@@ -21,8 +21,7 @@ namespace Prode.Plugin
         public int calcularPuntajeTotal(Guid Torneo, Guid JugadorProde, int puntajePorAcierto)
         {
              int aciertostotales = 0;
-            if (puntajePorAcierto > 0)
-            {
+            
                 string bar_aciertostotales_sum = @"<fetch distinct='false' mapping='logical' aggregate='true'>
                    <entity name='bar_jugada'><attribute name='bar_aciertostotales' alias='bar_prediccionestotales_sum' aggregate='sum' />
                     <filter type='and'><condition attribute='bar_torneo' operator='eq' uitype='bar_torneo' value='{" + Torneo.ToString()
@@ -41,9 +40,9 @@ namespace Prode.Plugin
                     return puntajePorAcierto * aciertostotales;
                 }
                 return 0;
-            } 
+            
 
-            return 0;
+           
         }
         public int calcularAciertosMaximos(Guid Torneo, Guid JugadorProde)
         {
