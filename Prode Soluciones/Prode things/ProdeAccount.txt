@@ -1,0 +1,12 @@
+admin@prodeaw.onmicrosoft.com	
+Password01
+
+https://prodeaw.crm2.dynamics.com
+
+cecilia.piazza	
+jesica.rulli
+cristian.pilotto
+lucas.pueta
+jugador.generico
+administrador.prode
+prodetest.crm2.dynamics.com

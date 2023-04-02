@@ -1,0 +1,11 @@
+"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Football.svg/2048px-Football.svg.png"
+
+RGBA(55; 176; 146; 1)
+
+Botones (buttonFillColor)
+iconos (iconFillColor)
+Encabezados (headerFillColor)
+Color de etiqueta botón (buttonLabelColor)
+Registro seleccionado (selectedRecordColor)
+Color de texto (labelColor)
+ColorValue("#75AADB")
